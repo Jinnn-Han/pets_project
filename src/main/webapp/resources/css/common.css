@@ -1,0 +1,453 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --main1-color: #54C52C;
+    --main2-color: #3B9919;
+    --border-color: #e8e8e8;
+    --point-color: #f54;
+    --txt-color: #777777;
+    --addtxt-color: #999999;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+p {
+    font-size: 15px;
+}
+
+textarea{
+    resize: none;
+}
+
+.sFont {
+    font-size: 12px;
+}
+
+.mFont {
+    font-size: 14px;
+}
+
+.lFont {
+    font-size: 15px;
+}
+
+.border {
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    padding: 2.1%;
+}
+
+button.mainBtn {
+    background: #000;
+    color: #fff;
+    border-radius: 50px;
+    width: 220px;
+    padding: 10px;
+    border: none;
+}
+
+button.subBtn {
+    background: #fff;
+    color: #333;
+    border: 1px solid #D0D0D0 !important;
+    border-radius: 50px;
+    width: 220px;
+    padding: 10px;
+    border: none;
+}
+
+button:hover {
+    background: var(--point-color) !important;
+    transition: 0.15s;
+    color: #fff !important;
+}
+
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+* {}
+
+.container {
+    width: 1360px;
+    max-width: 100%;
+}
+
+/* 헤더 */
+.nav-link {
+    padding: 0;
+}
+
+.topNav a {
+    font-size: 12px;
+    color: var(--txt-color) !important;
+}
+
+.logo {
+    width: 150px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 검색창 */
+.search {
+    position: relative;
+}
+
+.search i {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--addtxt-color);
+}
+
+/* 좌측 프로필사진 */
+.profile {
+    width: 300px;
+    max-width: 100%;
+    height: 500px;
+}
+
+.profile .photo {
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/profileImg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profileCtnt {
+    text-align: center;
+    padding: 0 0 70px 0;
+}
+
+/* 최근 나의댕냥일지 */
+#daily .row>a {
+    width: 510px;
+    max-width: 100%;
+    transition: 0.2s;
+}
+
+.daily>a:hover {
+    background: #f8f8f8;
+}
+
+#daily .imgBox {
+    background: url(../img/profileImg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 170px;
+}
+
+#daily .border:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 0px var(--point-color);
+    border: 1px solid var(--point-color) !important;
+}
+
+#daily .date span:nth-child(odd) {
+    color: var(--addtxt-color);
+}
+
+#daily .ctnt {
+    color: var(--txt-color);
+    line-height: 17px;
+    min-height: 75px;
+    overflow: hidden;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+}
+
+#daily .memo {
+    line-height: 17px;
+}
+
+#daily .memo span:nth-child(odd) {
+    color: var(--point-color);
+}
+
+#daily .memo span:nth-child(even) {
+    color: var(--txt-color);
+}
+
+/* 사지말고 입양해요 */
+#adoption {
+    background: #FBFBFB;
+    padding: 50px 0;
+    margin: 50px 0;
+}
+
+#adoption h5{
+    position: relative;
+}
+
+#adoption h5 img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    animation: icon 5s infinite;
+    animation-delay:0s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#adoption h5 img.icon1{
+    left: 40.5%;
+    animation: icon1 4s infinite;
+}
+
+#adoption h5 img.icon2{
+    right: 40.5%;
+    animation: icon2 3s infinite;
+}
+
+@keyframes icon1 {
+    0%{margin-top: 0;}
+    20%{margin-top: -0.5%;}
+    100%{margin-top: 0}
+}
+
+@keyframes icon2 {
+    0%{margin-top: 0;}
+    60%{margin-top: -0.5%;}
+    100%{margin-top: 0}
+}
+
+#adoption p {
+    margin: 0;
+}
+
+#adoption .box {
+    width: 330px;
+    max-width: 100%;
+    background: #fff;
+    transition: 0.2s;
+}
+
+#adoption .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 0px var(--point-color);
+    border: 1px solid var(--point-color) !important;
+}
+
+#adoption .imgBox{
+    width: 95%;
+    height: 100%;
+}
+
+#adoption .imgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#adoption .name{
+    font-weight: bold;
+}
+
+#adoption p{
+    color: var(--txt-color);
+    font-size: 15px;
+    line-height: 20px;
+}
+
+#adoption .mainBtn {
+    margin-top: 50px;
+}
+
+/* 홈게시판 */
+#home_notice {
+    margin: 70px 0 130px 0;
+}
+
+#home_notice .col-5 {
+    padding-right: 30px;
+}
+
+#home_notice .notice_title {
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    margin-left: 12px;
+    padding-left: 23px;
+}
+
+#home_notice .notice_title::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--main1-color);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#home_notice ul {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+#home_notice li {
+    border-bottom: 1px solid #000;
+    padding: 0 10px;
+}
+
+#home_notice li:hover {
+    background: #fcf1ef;
+}
+
+#home_notice li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.banner {
+    padding: 0;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom;
+}
+
+/* dailyInsert 일지작성 */
+#dailyInsert label{
+    width: 120px;
+    text-align: center;
+}
+
+#dailyInsert label,#dailyInsert select,#dailyInsert input,#dailyInsert textarea{
+    font-size: 14px;
+}
+
+#dailyInsert .choose .col{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#dailyInsert .choose select{
+    width: 200px;
+    max-width: 100%;
+}
+#dailyInsert .choose input[type=text]{
+    width: 70px;
+    max-width: 100%;
+}
+.postTitle{
+    justify-content: center;
+    border-bottom: 1px solid #777777;
+    margin: 0;
+}
+.postTitle input{
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.postContent{
+    margin: 0;
+    height: 500px;
+    border-bottom: 1px solid #777;
+}
+.postContent textarea{
+    border: none;
+}
+
+#dailyInsert .memo{
+    align-items: center;
+    padding: 10px 0;
+}
+
+#dailyInsert .memo input{
+    width: 900px;
+    max-width: 100%;
+}
+
+#dailyList .contents .imgBox{
+    height: 220px;
+}
+
+#dailyList .contents .imgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#dailyList .contents .list a{
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding:15px 25px;
+    transition: 0.2s;
+}
+
+#dailyList .contents .list p.mFont{
+    max-height: 120px;
+    overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  word-break: keep-all;
+}
+
+#dailyList .list:hover a{
+    border: 1px solid var(--point-color);
+    color: var(--point-color);
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 0px var(--point-color);
+    background: #fff;
+}
+
+.btnMove button{
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    background: #000;
+    color: #fff;
+    border: #000;
+}
