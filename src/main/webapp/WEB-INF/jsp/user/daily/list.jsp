@@ -37,16 +37,21 @@
 	                                       <div class="row">
 	                                           <div class="col d-flex flex-column justify-content-between">
 	                                               <div class="d-flex flex-column gap-3">
+	                                               		<span class="sFont">[${item.IDX}]</span>
 	                                                   <h6>${item.TITLE}</h6>
 	                                                   <p class="mFont">${item.CONTENT}</p>
 	                                               </div>
-	                                               <span class="sFont">${item.PET_NAME} (3살) 몸무게 ${item.WEIGHT}kg 
-	                                               		병원유무 
-	                                               		<c:choose>
-	                                               			<c:when test="${item.HOS_VISIT == 1}">O</c:when>
-	                                               			<c:otherwise>X</c:otherwise>
-	                                               		</c:choose>
-	                                               		  ${item.CREATE_TM}</span>
+	                                               <div class="">
+												    	<p class="mFont d-flex gap-2"><span class="point_red">MEMO</span>${item.MEMO}</p>
+		                                               <span class="sFont">${item.PET_NAME} (3살) 몸무게 ${item.WEIGHT}kg 
+		                                               		병원유무 
+		                                               		<c:choose>
+		                                               			<c:when test="${item.HOS_VISIT == 1}"><span class="point_grn">O</span></c:when>
+		                                               			<c:otherwise>X</c:otherwise>
+		                                               		</c:choose>
+		                                               		  ${item.CREATE_TM}
+		                                               </span>
+													</div>
 	                                           </div>
 	                                           <div class="col-4 border p-0">
 	                                               <div class="imgBox">

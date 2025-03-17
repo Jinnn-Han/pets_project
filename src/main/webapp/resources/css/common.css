@@ -443,8 +443,12 @@ li {
     background: #fff;
 }
 
-#dailyList .list .sFont{
+.point_red{
 	color:var(--point-color);
+}
+
+.point_grn{
+	color:var(--main1-color);
 }
 
 .btnMove button{
