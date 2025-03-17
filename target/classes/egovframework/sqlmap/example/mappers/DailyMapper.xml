@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="egovframework.example.daily.service.impl.DailyMapper">
+
+	<select id="getList" resultType="egovframework.example.daily.model.DailyVO"  parameterType="egovframework.example.daily.model.DailyVO">
+		/* DailyMapper.getList */
+		SELECT A.*
+		       ,M.NAME AS REG_NM
+		       ,M.LEVEL
+		  FROM TBL_DAILY A
+		  LEFT OUTER JOIN TBL_MEMBER M
+		    ON M.MEMBER_ID = A.MEMBER_ID
+		 WHERE A.STATUS > -1
+
+			<if test='LEVEL == 10'>
+				AND A.MEMBER_ID = #{MEMBER_ID}
+			</if>
+
+		 ORDER BY A.CREATE_TM DESC
+	</select>
+
+	<select id="getListTotalCount" resultType="int" parameterType="egovframework.example.daily.model.DailyVO">
+		/* DailyMapper.getList */
+		SELECT COUNT(*)
+		  FROM TBL_DAILY A
+		 WHERE A.STATUS > -1
+	</select>
+
+	<select id="getView" resultType="egovframework.example.daily.model.DailyVO"  parameterType="egovframework.example.daily.model.DailyVO">
+		/* DailyMapper.getView */
+		SELECT A.*
+		       ,M.NAME AS REG_NM
+		  FROM TBL_DAILY A
+		  LEFT OUTER JOIN TBL_MEMBER M
+		    ON M.MEMBER_ID = A.MEMBER_ID
+		 WHERE IDX = #{IDX}
+	</select>
+
+	<insert id="insertDaily" parameterType="egovframework.example.daily.model.DailyVO">
+		/* DailyMapper.insertDaily */
+		INSERT INTO TBL_DAILY (
+					MEMBER_ID,
+					PET_NAME,
+					WEIGHT,
+					HOS_VISIT,
+					TITLE,
+					CONTENT,
+					MEMO,
+					STATUS,
+					CREATE_TM
+		  ) VALUES (
+		  			#{MEMBER_ID},
+		  			#{PET_NAME},
+		  			#{WEIGHT},
+		  			#{HOS_VISIT},
+		  			#{TITLE},
+		  			#{CONTENT},
+		  			#{MEMO},
+					1,
+		  			now()
+		  )
+
+		<selectKey keyProperty="IDX" resultType="int" order="AFTER">
+        	SELECT LAST_INSERT_ID()
+	    </selectKey>
+
+	</insert>
+
+	<update id="deleteDaily" parameterType="egovframework.example.daily.model.DailyVO">
+		/* DailyMapper.deleteBoardPost */
+		UPDATE TBL_DAILY
+		   SET STATUS = -1
+		 WHERE IDX  = #{IDX}
+	</update>
+
+</mapper>

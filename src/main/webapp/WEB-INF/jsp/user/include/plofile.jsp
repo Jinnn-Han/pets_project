@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 	<aside class="col-3 profile border row justify-content-center gap-3">
 	    <div class="border photo"></div>
@@ -11,7 +12,7 @@
 	        <p>안녕하세요. 나 호두키우는 호두맘이요.</p>
 	    </div>
 	    <div class="d-flex gap-2">
-	        <button type="button" class="btn mainBtn">일지작성</button>
+	        <button type="button" class="btn mainBtn" onclick="location.href='${ctx}/user/daily/insert.do'">일지작성</button>
 	        <button type="button" class="btn subBtn">마이페이지</button>
 	    </div>
 	</aside>

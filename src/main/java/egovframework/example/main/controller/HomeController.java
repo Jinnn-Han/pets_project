@@ -22,7 +22,7 @@ public class HomeController {
 		ModelMap model = new ModelMap();
 		
 		String contextPath = request.getContextPath();
-		System.out.println("출력 완료" + contextPath);
+		System.out.println("main jsp 출력 완료" + contextPath);
 
 		return new ModelAndView("user/main/main", "model", model);
 	}

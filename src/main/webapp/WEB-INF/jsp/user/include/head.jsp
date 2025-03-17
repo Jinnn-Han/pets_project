@@ -14,5 +14,10 @@
 	<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 	<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+	
+	<!-- 제이쿼리 -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	
+	<c:set var="ctx" value="${pageContext.request.contextPath}" />
 
 </head>

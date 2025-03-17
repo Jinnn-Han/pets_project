@@ -16,7 +16,7 @@
     </nav>
     <header class="py-3 mb-4 border-bottom">
         <div class="container d-flex flex-wrap justify-content-center">
-            <a href="${pageContext.request.contextPath}/home.do"
+            <a href="${pageContext.request.contextPath}"
                 class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
                 <span class="fs-4 logo">
                     <img src="${pageContext.request.contextPath}/resources/img/logo.png" alt="logo" />
@@ -28,8 +28,8 @@
                         <a href="#" class="nav-link link-body-emphasis px-2 dropdown-toggle" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">나의댕냥일지</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="${pageContext.request.contextPath}/daily/insert.do">일지작성</a></li>
-                            <li><a class="dropdown-item" href="${pageContext.request.contextPath}/daily/list.do">일지기록</a></li>
+                            <li><a class="dropdown-item" href="${pageContext.request.contextPath}/user/daily/insert.do">일지작성</a></li>
+                            <li><a class="dropdown-item" href="${pageContext.request.contextPath}/user/daily/list.do">일지기록</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">

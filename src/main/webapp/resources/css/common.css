@@ -443,6 +443,10 @@ li {
     background: #fff;
 }
 
+#dailyList .list .sFont{
+	color:var(--point-color);
+}
+
 .btnMove button{
     border-radius: 50px;
     width: 30px;
