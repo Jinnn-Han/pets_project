@@ -13,15 +13,11 @@
 		    ON M.MEMBER_ID = A.MEMBER_ID
 		 WHERE A.STATUS > -1
 
-			<if test='LEVEL == 10'>
-				AND A.MEMBER_ID = #{MEMBER_ID}
-			</if>
-
 		 ORDER BY A.CREATE_TM DESC
 	</select>
 
 	<select id="getListTotalCount" resultType="int" parameterType="egovframework.example.daily.model.DailyVO">
-		/* DailyMapper.getList */
+		/* DailyMapper.getListTotalCount */
 		SELECT COUNT(*)
 		  FROM TBL_DAILY A
 		 WHERE A.STATUS > -1
@@ -30,11 +26,9 @@
 	<select id="getView" resultType="egovframework.example.daily.model.DailyVO"  parameterType="egovframework.example.daily.model.DailyVO">
 		/* DailyMapper.getView */
 		SELECT A.*
-		       ,M.NAME AS REG_NM
 		  FROM TBL_DAILY A
-		  LEFT OUTER JOIN TBL_MEMBER M
-		    ON M.MEMBER_ID = A.MEMBER_ID
-		 WHERE IDX = #{IDX}
+		  LEFT OUTER JOIN TBL_MEMBER M ON M.MEMBER_ID = A.MEMBER_ID
+		 WHERE A.IDX = #{IDX}
 	</select>
 
 	<insert id="insertDaily" parameterType="egovframework.example.daily.model.DailyVO">
@@ -48,7 +42,8 @@
 					CONTENT,
 					MEMO,
 					STATUS,
-					CREATE_TM
+					CREATE_TM,
+					FILE
 		  ) VALUES (
 		  			#{MEMBER_ID},
 		  			#{PET_NAME},
@@ -58,7 +53,8 @@
 		  			#{CONTENT},
 		  			#{MEMO},
 					1,
-		  			now()
+		  			now(),
+		  			#{FILE}
 		  )
 
 		<selectKey keyProperty="IDX" resultType="int" order="AFTER">

@@ -18,8 +18,7 @@ public class DailyVO extends SearchVo {
 	int STATUS;
 	String CREATE_TM;
 	String UPDATE_TM;
-	
-	String LEVEL;
+	String FILE;
 	
 	public int getIDX() {
 		return IDX;
@@ -87,10 +86,10 @@ public class DailyVO extends SearchVo {
 	public void setUPDATE_TM(String uPDATE_TM) {
 		UPDATE_TM = uPDATE_TM;
 	}
-	public String getLEVEL() {
-		return LEVEL;
+	public String getFILE() {
+		return FILE;
 	}
-	public void setLEVEL(String lEVEL) {
-		LEVEL = lEVEL;
+	public void setFILE(String fILE) {
+		FILE = fILE;
 	}
 }

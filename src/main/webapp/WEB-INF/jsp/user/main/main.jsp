@@ -21,84 +21,28 @@
                 <section class="col" id="daily">
                     <h6>최근 나의댕냥일지</h6>
                     <div class="row gap-3 justify-content-center">
-                        <a href="" class="col-6 border">
-                            <div class="row">
-                                <div class="col-7">
-                                    <div class="date sFont d-flex gap-4">
-                                        <span>작성일 2024-08-29</span>
-                                        <span>호두 (치즈,3살)</span>
-                                    </div>
-                                    <h6 class="title lFont">호늘의 호도는?뱃살이 귀엽다!</h6>
-                                    <p class="ctnt mFont">호두는 뱃살이 빵빵해서 너무 귀엽다.애교철철호두는 뱃살이 빵빵해서 너무 귀엽다.애교철철
-                                    </p>
-                                    <div class="memo sFont d-flex flex-column">
-                                        <span>MEMO</span>
-                                        <span>호두는 밥을 좀 적게 줘야할것같다...</span>
-                                    </div>
-                                </div>
-                                <div class="col-5">
-                                    <div class="imgBox"></div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="" class="col-6 border">
-                            <div class="row">
-                                <div class="col-7">
-                                    <div class="date sFont d-flex gap-4">
-                                        <span>작성일 2024-08-29</span>
-                                        <span>호두 (치즈,3살)</span>
-                                    </div>
-                                    <h6 class="title lFont">호늘의 호도는?뱃살이 귀엽다!</h6>
-                                    <p class="ctnt mFont">호두는 뱃살이 빵빵해서 너무 귀엽다.애교철철호두는 뱃살이 빵빵해서 너무 귀엽다.애교철철
-                                    </p>
-                                    <div class="memo sFont d-flex flex-column">
-                                        <span>MEMO</span>
-                                        <span>호두는 밥을 좀 적게 줘야할것같다...</span>
-                                    </div>
-                                </div>
-                                <div class="col-5">
-                                    <div class="imgBox"></div>
-                                </div>
-                            </div>
-                        </a> <a href="" class="col-6 border">
-                            <div class="row">
-                                <div class="col-7">
-                                    <div class="date sFont d-flex gap-4">
-                                        <span>작성일 2024-08-29</span>
-                                        <span>호두 (치즈,3살)</span>
-                                    </div>
-                                    <h6 class="title lFont">호늘의 호도는?뱃살이 귀엽다!</h6>
-                                    <p class="ctnt mFont">호두는 뱃살이 빵빵해서 너무 귀엽다.애교철철호두는 뱃살이 빵빵해서 너무 귀엽다.애교철철
-                                    </p>
-                                    <div class="memo sFont d-flex flex-column">
-                                        <span>MEMO</span>
-                                        <span>호두는 밥을 좀 적게 줘야할것같다...</span>
-                                    </div>
-                                </div>
-                                <div class="col-5">
-                                    <div class="imgBox"></div>
-                                </div>
-                            </div>
-                        </a> <a href="" class="col-6 border">
-                            <div class="row">
-                                <div class="col-7">
-                                    <div class="date sFont d-flex gap-4">
-                                        <span>작성일 2024-08-29</span>
-                                        <span>호두 (치즈,3살)</span>
-                                    </div>
-                                    <h6 class="title lFont">호늘의 호도는?뱃살이 귀엽다!</h6>
-                                    <p class="ctnt mFont">호두는 뱃살이 빵빵해서 너무 귀엽다.애교철철호두는 뱃살이 빵빵해서 너무 귀엽다.애교철철
-                                    </p>
-                                    <div class="memo sFont d-flex flex-column">
-                                        <span>MEMO</span>
-                                        <span>호두는 밥을 좀 적게 줘야할것같다...</span>
-                                    </div>
-                                </div>
-                                <div class="col-5">
-                                    <div class="imgBox"></div>
-                                </div>
-                            </div>
-                        </a>
+<%--                     	<c:forEach var="item" items="${dailyList}" varStatus="status">
+	                        <a href="${ctx}/user/daily/${item.IDX}/view.do" class="col-6 border">
+	                            <div class="row">
+	                                <div class="col-7">
+	                                    <div class="date sFont d-flex gap-4">
+	                                        <span>작성일 2024-08-29</span>
+	                                        <span>호두 (치즈,3살)</span>
+	                                    </div>
+	                                    <h6 class="title lFont">호늘의 호도는?뱃살이 귀엽다!</h6>
+	                                    <p class="ctnt mFont">호두는 뱃살이 빵빵해서 너무 귀엽다.애교철철호두는 뱃살이 빵빵해서 너무 귀엽다.애교철철
+	                                    </p>
+	                                    <div class="memo sFont d-flex flex-column">
+	                                        <span>MEMO</span>
+	                                        <span>호두는 밥을 좀 적게 줘야할것같다...</span>
+	                                    </div>
+	                                </div>
+	                                <div class="col-5">
+	                                    <div class="imgBox"></div>
+	                                </div>
+	                            </div>
+	                        </a>
+                    	</c:forEach> --%>
                     </div>
                 </section>
             </div>

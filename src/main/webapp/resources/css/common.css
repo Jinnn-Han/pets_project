@@ -36,6 +36,12 @@ textarea{
     resize: none;
 }
 
+.disabled:disabled{
+	background-color: #fff !important;
+	border: none !important;
+	--bs-form-select-bg-img: none !important;
+}
+
 .sFont {
     font-size: 12px;
 }
@@ -417,8 +423,11 @@ li {
     object-position: center;
 }
 
+#dailyList .contents .listCount{
+    border-bottom: 1px solid var(--border-color); 
+}
+
 #dailyList .contents .list a{
-    border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
     padding:15px 25px;
     transition: 0.2s;
