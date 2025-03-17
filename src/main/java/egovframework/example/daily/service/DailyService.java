@@ -16,4 +16,6 @@ public interface DailyService {
 
 	public void deleteDaily(DailyVO dailyVo);
 
+	public List<DailyVO> getListAll(DailyVO dailyVo);
+
 }

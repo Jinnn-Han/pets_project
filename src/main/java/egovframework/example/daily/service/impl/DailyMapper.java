@@ -19,4 +19,6 @@ public interface DailyMapper {
 
 	public void deleteDaily(DailyVO dailyVo);
 
+	public List<DailyVO> getListAll(DailyVO dailyVo);
+
 }

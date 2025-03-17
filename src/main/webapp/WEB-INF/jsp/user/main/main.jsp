@@ -21,7 +21,7 @@
                 <section class="col" id="daily">
                     <h6>최근 나의댕냥일지</h6>
                     <div class="row gap-3 justify-content-center">
-<%--                     	<c:forEach var="item" items="${dailyList}" varStatus="status">
+                    	<c:forEach var="item" items="${model.dailyList}" varStatus="status">
 	                        <a href="${ctx}/user/daily/${item.IDX}/view.do" class="col-6 border">
 	                            <div class="row">
 	                                <div class="col-7">
@@ -42,7 +42,7 @@
 	                                </div>
 	                            </div>
 	                        </a>
-                    	</c:forEach> --%>
+                    	</c:forEach>
                     </div>
                 </section>
             </div>

@@ -42,6 +42,23 @@ textarea{
 	--bs-form-select-bg-img: none !important;
 }
 
+.idxPoint{
+	position: relative;
+	color:#fff;
+}
+.idxPoint::before{
+	content: '';
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    border-radius: 40px;
+    background: #000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
 .sFont {
     font-size: 12px;
 }
@@ -450,6 +467,10 @@ li {
     transform: translate(-5px, -5px);
     box-shadow: 5px 5px 0px var(--point-color);
     background: #fff;
+}
+
+#dailyList .list:hover a .idxPoint::before{
+	background:var(--point-color);
 }
 
 .point_red{

@@ -29,14 +29,29 @@ public class DailyServiceImpl implements DailyService {
 		int itemtotalcount = dailyMapper.getListTotalCount(dailyVo);
 
 		PageInfo<DailyVO> pageInfo = new PageInfo<DailyVO>(
-				dailyVo.getPAGE(),
-				dailyVo.getPAGE(),
+				dailyVo.getPageIndex(),
+				dailyVo.getPageSize(),
 				itemtotalcount,
 				list
 			);
 
 		return list;
 
+	}
+	
+	@Override
+	public List<DailyVO> getListAll(DailyVO dailyVo) {
+		List<DailyVO> list = dailyMapper.getListAll(dailyVo);
+		int itemtotalcount = dailyMapper.getListTotalCount(dailyVo);
+		
+		PageInfo<DailyVO> pageInfo = new PageInfo<DailyVO>(
+				dailyVo.getPageIndex(),
+				dailyVo.getPageSize(),
+				itemtotalcount,
+				list
+			);
+		
+		return list;
 	}
 
 	@Override

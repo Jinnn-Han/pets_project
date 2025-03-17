@@ -37,7 +37,12 @@ public class DailyController {
 		ModelAndView model = new ModelAndView();
 		model.setViewName("user/daily/list");
 
-        dailyVo.setPAGE(10);
+        if (dailyVo.getPageIndex() == 0) {
+        	dailyVo.setPageIndex(10);
+        }
+        if (dailyVo.getPageSize() == 0) {
+        	dailyVo.setPageSize(10);
+        }
 
         HttpSession session = request.getSession();
         String level = (String) session.getAttribute("ssion_level");

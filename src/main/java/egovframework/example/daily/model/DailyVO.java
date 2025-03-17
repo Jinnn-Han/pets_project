@@ -3,9 +3,10 @@ package egovframework.example.daily.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import egovframework.example.admin.SearchModel;
 import egovframework.example.admin.SearchVo;
 
-public class DailyVO extends SearchVo {
+public class DailyVO extends SearchModel {
 	
 	int IDX;
 	String MEMBER_ID;

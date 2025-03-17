@@ -31,16 +31,22 @@ public class HomeController {
 	public ModelAndView main(@ModelAttribute("dailyVo")  DailyVO dailyVo,
 			HttpServletRequest request, HttpServletResponse response) {
 		
-		ModelAndView model = new ModelAndView();
-		model.setViewName("user/main/main");
+		ModelMap model = new ModelMap();
 		
 		 // 일지 기록 리스트 가져오기
 		List<DailyVO> dailyList = dailyService.getList(dailyVo); 
 		
+        if (dailyVo.getPageIndex() == 0) {
+        	dailyVo.setPageIndex(4);
+        }
+        if (dailyVo.getPageSize() == 0) {
+        	dailyVo.setPageSize(4);
+        }
+		
 		// 모델에 리스트 추가
-		model.addObject("dailyList", dailyList);
+		model.put("dailyList", dailyList);
 
-		return model;
+		return new ModelAndView("user/main/main", "model",model);
 	}
 
 }
