@@ -9,13 +9,6 @@
 <head>
 	<%@ include file="../include/head.jsp" %>
 	<style>
-		.modal.show .modal-dialog{
-			max-width:100%;
-		}
-		.modal-content{
-			top: 50%;
-	    	transform: translateY(-50%);
-    	}
     	.btn-primary{
     		background:var(--point-color);
     	}
@@ -25,7 +18,7 @@
 	 
 	<%@ include file="../include/header.jsp" %>
 	<div class="wrap sub_page login">
-		<div class="container">
+		<div class="container p-5">
 			<section id="login" class="col-4">
 				<form action="${pageContext.request.contextPath}/member/login.do" method="post" name="form" id="form">
 			    <div class="container_inner text-center">
@@ -65,12 +58,12 @@
 	        		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 	      		</div>
 				<form action="${pageContext.request.contextPath}/member/findPw.do" method="post" name="FormfindPw" id="FormfindPw">
-	    		<div class="modal_body_box px-4">
-	        		<div class="login_int_box mgb_10 row align-items-center">
+	    		<div class="modal_body_box p-3">
+	        		<div class="login_int_box mgb_10 row align-items-center my-2">
 						<label class="col">아이디</label>
 						<div class="col-9"><input type="text" class="form-control" id="MEMBER_ID" name="MEMBER_ID" placeholder="아이디를 입력하세요." /></div>
 					</div>
-	        		<div class="login_int_box mgb_10 row align-items-center">
+	        		<div class="login_int_box mgb_10 row align-items-center my-2">
 						<label class="col">이메일</label>
 						<div class="col-9"><input type="email" class="form-control" id="EMAIL" name="EMAIL" placeholder="가입시 설정하신 이메일 입력해 주세요." /></div>
 					</div>
@@ -93,12 +86,12 @@
 	        		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 	      		</div>
 				<form action="${pageContext.request.contextPath}/member/findId.do" method="post" name="FormfindId" id="FormfindId">
-	    		<div class="modal_body_box px-4">
-	        		<div class="login_int_box mgb_10 row align-items-center">
+	    		<div class="modal_body_box p-3">
+	        		<div class="login_int_box mgb_10 row align-items-center my-2">
 						<label class="col">이름</label>
 						<div class="col-9"><input type="text" class="form-control" id="NAME" name="NAME" placeholder="이름을 입력하세요." /></div>
 					</div>
-	        		<div class="login_int_box mgb_10 row align-items-center">
+	        		<div class="login_int_box mgb_10 row align-items-center my-2">
 						<label class="col">이메일</label>
 						<div class="col-9"><input type="email" class="form-control" id="EMAIL" name="EMAIL" placeholder="가입시 설정하신 이메일 입력해 주세요." /></div>
 					</div>

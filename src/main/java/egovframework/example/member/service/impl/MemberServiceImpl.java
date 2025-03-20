@@ -33,8 +33,8 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public int setInsert(MemberVo domain) {
 
-		String pwd = SUtil.getSHA256(domain.getPASSWORD());
-		domain.setPASSWORD(pwd);
+//		String pwd = SUtil.getSHA256(domain.getPASSWORD());
+//		domain.setPASSWORD(pwd);
 
 		return memberMapper.setInsert(domain);
 	}

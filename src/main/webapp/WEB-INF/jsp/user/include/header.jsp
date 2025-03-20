@@ -7,7 +7,7 @@
         	<ul class="nav topNav">
 	        <c:choose>
 				<c:when test="${ssion_login == 'okok' }">
-					<li class="nav-link link-body-emphasis px-2"><i class="fa-solid fa-user"></i> <span>${ssion_user_id}</span> 님 반갑습니다.</li>
+					<li class="nav-link px-2"><i class="fa-solid fa-user"></i> <span>${ssion_user_id}</span> 님 반갑습니다.</li>
 					<li><a href="${ctx}/user/member/logout.do" class="nav-link link-body-emphasis px-2">로그아웃</a></li>
 				</c:when>
 				<c:otherwise>

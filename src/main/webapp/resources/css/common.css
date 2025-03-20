@@ -127,6 +127,11 @@ li {
     color: var(--txt-color) !important;
 }
 
+.topNav li{
+    font-size: 12px;
+    color: var(--point-color) !important;
+}
+
 .logo {
     width: 150px;
 }
