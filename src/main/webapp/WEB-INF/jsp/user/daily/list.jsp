@@ -72,15 +72,8 @@
 		                           	</c:forEach>
                                	</c:otherwise>
                            	</c:choose>
-                           	<div class="row my-5">
-                               	<div class="btnMove d-flex justify-content-center gap-3">
-                                   	<!-- <button type="button"><i class="fa-solid fa-angles-left"></i></button>
-                                   	<button type="button"><i class="fa-solid fa-angle-left"></i></button> -->
-                                   	<button type="button">1</button>
-                                   	<!-- <button type="button"><i class="fa-solid fa-angle-right"></i></button>
-                                   	<button type="button"><i class="fa-solid fa-angles-right"></i></button> -->
-                               	</div>
-                           	</div>
+                           	<!-- 페이지 이동 -->
+                           	<%@ include file="../include/pageing.jsp" %> 
                        	</div>
                    	</div>
 					</section>

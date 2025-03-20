@@ -4,14 +4,18 @@
 <meta charset="UTF-8">
     <nav>
         <div class="container d-flex flex-wrap justify-content-end py-1">
-            <ul class="nav topNav">
-                <li class="nav-item">
-                    <a href="#" class="nav-link link-body-emphasis px-2">로그인</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link link-body-emphasis px-2">회원가입</a>
-                </li>
-            </ul>
+        	<ul class="nav topNav">
+	        <c:choose>
+				<c:when test="${ssion_login == 'okok' }">
+					<li class="nav-link link-body-emphasis px-2"><i class="fa-solid fa-user"></i> <span>${ssion_user_id}</span> 님 반갑습니다.</li>
+					<li><a href="${ctx}/user/member/logout.do" class="nav-link link-body-emphasis px-2">로그아웃</a></li>
+				</c:when>
+				<c:otherwise>
+					<li><a href="${ctx}/user/member/login.do" class="nav-link link-body-emphasis px-2">로그인</a></li>
+					<li><a href="${ctx}/user/member/insert.do" class="nav-link link-body-emphasis px-2">회원가입</a></li>
+				</c:otherwise>
+			</c:choose>
+			</ul>
         </div>
     </nav>
     <header class="py-3 mb-4 border-bottom">

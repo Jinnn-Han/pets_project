@@ -3,7 +3,7 @@ package egovframework.example.daily.service;
 import java.util.HashMap;
 import java.util.List;
 
-import egovframework.example.cmmn.PageInfo;
+import com.system.util.PageInfo;
 import egovframework.example.daily.model.DailyVO;
 
 public interface DailyService {

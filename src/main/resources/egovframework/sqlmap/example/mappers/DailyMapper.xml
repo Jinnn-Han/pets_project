@@ -18,7 +18,7 @@
 	  	</if>
 
 		 ORDER BY A.CREATE_TM DESC
-		 LIMIT ${limitCnt}, ${pageSize}
+		 LIMIT ${limitStart}, ${pageSize}
 	</select>
 	
 	<select id="getListAll" resultType="egovframework.example.daily.model.DailyVO"  parameterType="egovframework.example.daily.model.DailyVO">
@@ -35,7 +35,7 @@
 	  	</if>
 
 		 ORDER BY A.CREATE_TM DESC
-		 LIMIT ${limitCnt}, ${pageSize}
+		 LIMIT ${limitStart}, ${pageSize}
 	</select>
 
 	<select id="getListTotalCount" resultType="int" parameterType="egovframework.example.daily.model.DailyVO">

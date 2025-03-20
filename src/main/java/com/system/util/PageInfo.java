@@ -1,4 +1,4 @@
-package egovframework.example.cmmn;
+package com.system.util;
 
 import java.io.Serializable;
 import java.util.List;

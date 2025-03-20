@@ -22,40 +22,35 @@
 	</style>
 </head>
 <body>
-
 	 
 	<%@ include file="../include/header.jsp" %>
 	<div class="wrap sub_page login">
- 
-		<div class="sub_header">
-		    <div class="container_inner">
-		    </div>
+		<div class="container">
+			<section id="login" class="col-4">
+				<form action="${pageContext.request.contextPath}/member/login.do" method="post" name="form" id="form">
+			    <div class="container_inner text-center">
+			        <h3>로그인</h3> 
+			        <div class="login_box">
+			            <p>아이디와 비밀번호를 입력해주세요.</p>
+			            <div class="row">
+			                <input type="text" class="form-control" id="MEMBER_ID" name="MEMBER_ID" placeholder="아이디">
+			            </div>
+			            <div class="row mt-2">
+			                <input type="password" class="form-control" id="PASSWORD" name="PASSWORD" placeholder="비밀번호">
+			            </div>
+			            <div class="row justify-content-center my-4">
+			                <button type="button" class="btn mainBtn" onClick="login();">로그인</button>
+			            </div>
+			        </div>
+			        <div class="elements">
+						<a href="#" data-bs-toggle="modal" data-bs-target="#findId">아이디 찾기</a>
+						<a href="#" data-bs-toggle="modal" data-bs-target="#findPw">비밀번호 찾기</a>
+			            <a href="${pageContext.request.contextPath}/user/member/insert.do">회원가입</a>
+			        </div>
+			    </div>
+			    </form>
+			</section>
 		</div>
-	
-		<section id="login">
-			<form action="${pageContext.request.contextPath}/member/login.do" method="post" name="form" id="form">
-		    <div class="container_inner text-center">
-		        <h3>로그인</h3>
-		        <div class="login_box">
-		            <p>아이디와 비밀번호를 입력해주세요.</p>
-		            <div class="row">
-		                <input type="text" class="form-control" id="ID" name="ID" placeholder="아이디">
-		            </div>
-		            <div class="row mt-2">
-		                <input type="password" class="form-control" id="PW" name="PW" placeholder="비밀번호">
-		            </div>
-		            <div class="row">
-		                <button type="button" class="btn btn-send" onClick="login();">로그인</button>
-		            </div>
-		        </div>
-		        <div class="row elements">
-					<a href="#" data-bs-toggle="modal" data-bs-target="#findId">아이디 찾기</a>
-					<a href="#" data-bs-toggle="modal" data-bs-target="#findPw">비밀번호 찾기</a>
-		            <a href="${pageContext.request.contextPath}/user/member/insert.do">회원가입</a>
-		        </div>
-		    </div>
-		    </form>
-		</section>
 	</div>
 
 	<%@ include file="../include/footer.jsp" %>
@@ -73,7 +68,7 @@
 	    		<div class="modal_body_box px-4">
 	        		<div class="login_int_box mgb_10 row align-items-center">
 						<label class="col">아이디</label>
-						<div class="col-9"><input type="text" class="form-control" id="ID" name="ID" placeholder="아이디를 입력하세요." /></div>
+						<div class="col-9"><input type="text" class="form-control" id="MEMBER_ID" name="MEMBER_ID" placeholder="아이디를 입력하세요." /></div>
 					</div>
 	        		<div class="login_int_box mgb_10 row align-items-center">
 						<label class="col">이메일</label>

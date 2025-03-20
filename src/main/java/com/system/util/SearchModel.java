@@ -1,10 +1,10 @@
-package egovframework.example.admin;
+package com.system.util;
 
 public class SearchModel {
 
 	private int pageIndex = 1;  // 현재 페이지 번호
-    private int pageSize  = 10; // 페이지 게시글 갯수
-    private int limitCnt  = 0;
+    private int pageSize  = 10; // 페이지당 게시글 수
+    private int totalCount  = 0; // 전체 데이터 개수
 
     private String searchType = "";
     private String searchText = "";
@@ -30,13 +30,13 @@ public class SearchModel {
 		this.pageSize = pageSize;
 	}
 
-	public int getLimitCnt() {
-		return (this.pageIndex - 1) * this.pageSize;
-	}
+	public int getTotalCount() {
+        return totalCount;
+    }
 
-	public void setLimitCnt(int limitCnt) {
-		this.limitCnt = limitCnt;
-	}
+    public void setTotalCount(int totalCount) {
+        this.totalCount = totalCount;
+    }
 
 	public String getSearchType() {
 		return searchType;
@@ -77,5 +77,25 @@ public class SearchModel {
 	public void setSubPath(String subPath) {
 		this.subPath = subPath;
 	}
+	
+	 // Limit 시작 위치 계산
+    public int getLimitStart() {
+        return (this.pageIndex - 1) * this.pageSize;
+    }
+
+    // 총 페이지 수 계산
+    public int getTotalPages() {
+        return (int) Math.ceil((double) totalCount / pageSize);
+    }
+
+    // 이전 페이지 존재 여부
+    public boolean hasPreviousPage() {
+        return pageIndex > 1;
+    }
+
+    // 다음 페이지 존재 여부
+    public boolean hasNextPage() {
+        return pageIndex < getTotalPages();
+    }
 
 }

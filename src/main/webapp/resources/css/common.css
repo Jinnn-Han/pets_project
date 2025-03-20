@@ -489,3 +489,21 @@ li {
     color: #fff;
     border: #000;
 }
+
+#login {
+	margin:auto;
+	padding: 2em;
+    border: 1px solid #eee;
+    border-radius: 7px;
+}
+
+.elements{
+	display: flex;
+	justify-content:center;
+	gap:1em;
+	font-size:14px;
+}
+
+.elements a:hover{
+	color:var(--point-color);
+}

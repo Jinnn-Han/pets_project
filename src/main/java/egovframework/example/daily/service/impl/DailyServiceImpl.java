@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import egovframework.example.cmmn.PageInfo;
+import com.system.util.PageInfo;
 import egovframework.example.daily.model.DailyVO;
 import egovframework.example.daily.service.DailyService;
 

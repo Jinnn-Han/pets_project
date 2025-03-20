@@ -3,8 +3,8 @@ package egovframework.example.daily.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import egovframework.example.admin.SearchModel;
-import egovframework.example.admin.SearchVo;
+import com.system.util.SearchModel;
+import com.system.util.SearchVo;
 
 public class DailyVO extends SearchModel {
 	

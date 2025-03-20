@@ -1,4 +1,4 @@
-package egovframework.example.admin;
+package com.system.util;
 
 public class SearchVo  {
 

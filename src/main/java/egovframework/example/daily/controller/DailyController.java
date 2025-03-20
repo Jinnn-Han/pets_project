@@ -20,7 +20,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import egovframework.example.daily.model.DailyVO;
 import egovframework.example.daily.service.DailyService;
-import egovframework.example.cmmn.PageInfo;
+import com.system.util.PageInfo;
 
 @Controller
 public class DailyController {
